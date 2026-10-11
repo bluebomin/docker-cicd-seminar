@@ -60,4 +60,4 @@ def test_real_database():
 def test_version():
     response = client.get("/version")
     assert response.status_code == 200
-    assert response.json() == {"version": "v2", "author": "경세빈"}
+    assert response.json() == {"version": "v3", "author": "경세빈"}
