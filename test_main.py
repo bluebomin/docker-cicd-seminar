@@ -56,3 +56,8 @@ def test_real_database():
     response = client.get("/db")
     assert response.status_code == 200
     assert response.json() == {"database": "ok", "value": 1}
+    
+def test_version():
+    response = client.get("/version")
+    assert response.status_code == 200
+    assert response.json() == {"version": "v2", "author": "경세빈"}
